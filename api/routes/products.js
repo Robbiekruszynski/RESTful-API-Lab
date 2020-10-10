@@ -16,5 +16,19 @@ router.post("/", (req, res, next) => {
   });
 });
 
+//get specific ID for an item
+router.get("/:productId", (req, res, next) => {
+  const id = req.params.productId;
+  if (id === "Percy") {
+    res.status(200).json({
+      message: "You've found me, OH YEAH",
+      id: id,
+    });
+  } else {
+    res.status(200).json({
+      message: "you passed an ID",
+    });
+  }
+});
+
 module.exports = router;
- 
