@@ -12,7 +12,7 @@ router.get("/", (req, res, next) => {
 });
 
 router.post("/", (req, res, next) => {
-  res.status(200).json({
+  res.status(201).json({
     message: "Handeling POST requests to /products",
   });
 });
@@ -36,15 +36,15 @@ router.get("/:productId", (req, res, next) => {
 //path specific ID for an item
 router.patch("/:productId", (req, res, next) => {
   res.status(200).json({
-      message: "Update product"
-  })
+    message: "Update product",
+  });
 });
 
 //delete specific ID for an item
 router.delete("/:productId", (req, res, next) => {
-    res.status(200).json({
-        message: "Delete product"
-    })
+  res.status(200).json({
+    message: "Delete product",
   });
+});
 
 module.exports = router;
