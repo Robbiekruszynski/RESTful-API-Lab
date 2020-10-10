@@ -1,3 +1,4 @@
+const { json } = require("express");
 const express = require("express");
 const router = express.Router();
 
@@ -23,6 +24,7 @@ router.get("/:productId", (req, res, next) => {
     res.status(200).json({
       message: "You've found me, OH YEAH",
       id: id,
+      //line 25 will extract and show the ID
     });
   } else {
     res.status(200).json({
@@ -30,5 +32,19 @@ router.get("/:productId", (req, res, next) => {
     });
   }
 });
+
+//path specific ID for an item
+router.patch("/:productId", (req, res, next) => {
+  res.status(200).json({
+      message: "Update product"
+  })
+});
+
+//delete specific ID for an item
+router.delete("/:productId", (req, res, next) => {
+    res.status(200).json({
+        message: "Delete product"
+    })
+  });
 
 module.exports = router;
