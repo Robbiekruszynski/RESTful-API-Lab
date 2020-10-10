@@ -1,1 +1,1 @@
-![alt text](imgs/api_layout.png)
+![api layout](imgs/api_layout.png)
