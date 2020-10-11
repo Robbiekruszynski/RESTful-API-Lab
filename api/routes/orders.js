@@ -8,6 +8,8 @@ router.get("/", (req, res, next) => {
   });
 });
 
+
+//lines 14-16 allow for addition (as strings) in body JSON within an object for productId and quantity
 router.post("/", (req, res, next) => {
   const order = {
     productId: req.body.productId,

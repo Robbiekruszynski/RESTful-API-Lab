@@ -11,6 +11,7 @@ router.get("/", (req, res, next) => {
   });
 });
 
+//lines 18-20 allow for addition (as strings) in body JSON within an object for name and price
 router.post("/", (req, res, next) => {
   const product = {
     name: req.body.name,
